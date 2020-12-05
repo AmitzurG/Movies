@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.app.movies.view.MoviesFragment"
+        android:label="@string/moviesFragmentLabel"
+        tools:layout="@layout/fragment_movies">
+
+        <action
+            android:id="@+id/action_moviesFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.app.movies.view.MovieDetailsFragment"
+        android:label="@string/movieDetailsFragmentLabel"
+        tools:layout="@layout/fragment_movie_details">
+        <argument
+            android:name="posterUrl"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument android:name="imdbId"
+            app:argType="string" />
+        <argument android:name="released"
+            app:argType="string" />
+        <argument
+            android:name="runtime"
+            app:argType="string" />
+        <argument
+            android:name="genre"
+            app:argType="string" />
+        <argument
+            android:name="director"
+            app:argType="string" />
+        <argument
+            android:name="writer"
+            app:argType="string" />
+        <argument
+            android:name="actors"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="movieItemPosterSize">90dp</dimen>
+    <dimen name="moviePosterSize">200dp</dimen>
+    <dimen name="movie_details_label_width">120dp</dimen>
+</resources>

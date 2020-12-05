@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="16dp"
+        tools:context=".view.MovieDetailsFragment">
+
+        <CheckBox
+            android:id="@+id/favoriteCheckBox"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:button="@drawable/favorite_movie_selector"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/posterImageView"
+            android:layout_width="@dimen/moviePosterSize" android:layout_height="@dimen/moviePosterSize"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/posterImageView">
+
+            <TextView
+                android:id="@+id/titleLabelTextView"
+                android:layout_width="@dimen/movie_details_label_width" android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/title" android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imdbIdLayout"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            android:descendantFocusability="blocksDescendants"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleLayout">
+
+            <TextView
+                android:id="@+id/imdbIdLabelTextView"
+                android:layout_width="@dimen/movie_details_label_width" android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/imdbID" android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/imdbIdTextView"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/teal_200" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/releasedLayout"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imdbIdLayout">
+
+            <TextView
+                android:id="@+id/releasedLabelTextView"
+                android:layout_width="@dimen/movie_details_label_width" android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/released" android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/releasedTextView"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/runtimeLayout"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/releasedLayout">
+
+            <TextView
+                android:id="@+id/runtimeLabelTextView"
+                android:layout_width="@dimen/movie_details_label_width" android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/runtime" android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/runtimeTextView"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/genreLayout"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/runtimeLayout">
+
+            <TextView
+                android:id="@+id/genreLabelTextView"
+                android:layout_width="@dimen/movie_details_label_width" android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/genre" android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/genreTextView"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/directorLayout"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genreLayout">
+
+            <TextView
+                android:id="@+id/directorLabelTextView"
+                android:layout_width="@dimen/movie_details_label_width" android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/director" android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/directorTextView"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/writerLayout"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/directorLayout">
+
+            <TextView
+                android:id="@+id/writerLabelTextView"
+                android:layout_width="@dimen/movie_details_label_width" android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/writer" android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/writerTextView"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/actorsLayout"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writerLayout">
+
+            <TextView
+                android:id="@+id/actorsLabelTextView"
+                android:layout_width="@dimen/movie_details_label_width" android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/actors" android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/actorsTextView"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="moviesFragmentLabel">Movies</string>
+    <string name="movieDetailsFragmentLabel">Movie Details</string>
+    <string name="searchMovies">Search movies</string>
+
+    <string name="title"><b>Title: </b></string>
+    <string name="year"><b>Year: </b></string>
+    <string name="imdbID"><b>IMDB ID: </b></string>
+    <string name="released"><b>Released: </b></string>
+    <string name="runtime"><b>Runtime: </b></string>
+    <string name="genre"><b>Genre: </b></string>
+    <string name="director"><b>Director: </b></string>
+    <string name="writer"><b>Writer: </b></string>
+    <string name="actors"><b>Actors: </b></string>
+</resources>
